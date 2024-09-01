@@ -1,0 +1,44 @@
+--1. Query the whole database
+     Select
+     *
+     From
+     studentperformance
+
+--2. Sort data by gender
+     Select
+     Gender,
+     Count(gender) as number
+     From
+     studentperformance
+     Group by
+     gender
+
+--3.Sort data by major
+	Select
+	Major,
+	Count(major) as number
+	From
+	studentperformance
+	Group by
+	major
+	Order by
+	number desc
+
+--4.Sort data by Part Time Job
+	Select
+	PartTimeJob,
+	Count(PartTimeJob) as number
+	From
+	studentperformance
+	Group by
+	PartTimeJob
+
+--5.Sort by extra curricular activities
+	Select
+	ExtraCurricularActivities,
+	Count(ExtraCurricularActivities) as number
+	From
+	studentperformance
+	Group by
+	ExtraCurricularActivities
+
