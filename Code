@@ -63,3 +63,75 @@
 	studentperformance
 	Group by
 	major
+
+--8.Average gpa sort by part time job
+	Select
+	PartTimeJob,
+	Round(avg(gpa),2) as average_gpa,
+	Round(max(gpa),2) as highest_gpa,
+	Round(min(gpa),2) as lowest_gpa
+	From
+	studentperformance
+	Group by
+	PartTimeJob
+
+--9.Average gpa sort by Extra Curricular Activities
+	Select
+	ExtraCurricularActivities,
+	Round(avg(gpa),2) as average_gpa,
+	Round(max(gpa),2) as highest_gpa,
+	Round(min(gpa),2) as lowest_gpa
+	From
+	studentperformance
+	Group by
+	ExtraCurricularActivities
+
+--10.Average gpa sort by major and gender
+	Select
+	Major,
+	Gender,
+	Round(avg(gpa),2) as average_gpa,
+	Round(max(gpa),2) as highest_gpa,
+	Round(min(gpa),2) as lowest_gpa
+	From
+	studentperformance
+	Group by
+	Major,
+	Gender
+	Order by
+	Major
+
+--11.Average weekly study hour sort by major and gender
+	Select
+	Major,
+	Gender,
+	Round(avg(studyhoursperweek),2) as average_weekly_study_hour
+	From
+	studentperformance
+	Group by
+	Major,
+	Gender
+	Order by
+	Major
+
+--12.Attendance rate sort by major and gender
+	Select
+	major,
+	gender,
+	Round(avg(attendancerate),2) as average_attendance_rate
+	From
+	studentperformance
+	Group by
+	major,
+	gender
+	Order by
+	major
+
+--13.Attendance rate sort by gender
+	Select
+	gender,
+	Round(avg(attendancerate),2) as average_attendance_rate
+	From
+	studentperformance
+	Group by
+	gender
