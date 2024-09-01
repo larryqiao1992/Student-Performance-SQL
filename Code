@@ -42,3 +42,24 @@
 	Group by
 	ExtraCurricularActivities
 
+--6.Average gpa sort by gender
+	Select
+	Gender,
+	Round(avg(GPA),2) as Average_GPA,
+	Round(max(gpa),2) as highest_gpa,
+	Round(min(gpa),2) as lowest_gpa
+	From
+	studentperformance
+	Group by
+	Gender
+
+--7.Average gpa sort by major
+	Select
+	Major,
+	Round(avg(gpa),2) as average_gpa,
+	Round(max(gpa),2) as highest_gpa,
+	Round(min(gpa),2) as lowest_gpa
+	From
+	studentperformance
+	Group by
+	major
